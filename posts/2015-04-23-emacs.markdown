@@ -1,0 +1,65 @@
+----
+title: Diving into Emacs
+----
+
+One leg of my project is to finally get deeper into Emacs than the bare mechanics I have made use of so far.
+
+So far I am running an almost vanilla version of GNU Emacs with only `haskell-mode` (not yet configured) and `sublime-themes`(for a darker theme) installed.
+
+I have run through the built in tutorial again and will attempt to focus on using the native key bindings. I've also created a list of key bindings to use with [Anki](http://ankirs.net). I've uploaded these [here](../resources/ankiemacs.txt).
+
+So what is the game plan?
+
+## Tasks ##
+- Setup `haskell-mode`
+- Flesh out vanilla Emacs the following sites might offer some inspiration:
+    - <https://github.com/emacs-tw/awesome-emacs>
+    - <http://skybert.net/emacs/a-handful-packages-that-will-turbo-boost-your-emacs/>
+    - <http://ericjmritz.name/2014/05/16/my-favorite-emacs-packages-out-of-one-hundred/>
+- Gradually expand knowledge of Emacs functionality and key bindings
+    - Use Anki to help with remembering key bindings and functions
+
+## Plan ##
+1. Use the remainder of the current week to find a set of packages that I want to keep around. Including setting up `haskell-mode`
+2. Use Emacs for as much work as possible
+3. Spend one day a week (1-2 hours that I get per day) on expanding my Emacs knowledge from one of the following sources:
+    - The built in documentation, `C-h r`
+    - <http://www.masteringemacs.org/>
+    - <http://planet.emacsen.org/>
+    - <http://emacsrocks.com/>
+
+## Long term plans ##
+In the long run I think I will become too frustrated using the Emacs key bindings and navigation. The use of modifier keys when navigating is already grating on my nerves. If this does not improve dramatically over the next months I think I will look more into setting up `Evil-mode` to get a taste of Vim navigation but retain the power of Emacs. But for now I will stick with 'pure' Emacs.
+
+## Setting up for Haskell development ##
+If found a fantastic [emacs-haskell-tutorial](https://github.com/serras/emacs-haskell-tutorial/blob/master/tutorial.md) on github. It pieces together a great set of basic packages to work with Haskell in Emacs. I did stumble upon one major issue when trying to follow the guide.
+
+I couldn't get `M-?` to work, I could not get around the following error.
+
+~~~~
+ghc-display-with-name: Symbol's function definition is void: turn-off-haskell-font-lock 
+~~~~
+
+It seems the current snapshots of `haskell-mode` and `ghc-mod` are not compatable. Thankfully the `ghc-mod` page is very eksplicit about using the stable version of melpa and after switching I managed to get everything up and running. It also seems like Emacs 24.4 has built in functionality to force certain packages to use stable melpa which could work out nicely.
+
+## Resulting setup ##
+Below is the setup I have ended up piecing together for my Emacs setup. I'm running GNU Emacs version 24.3. And here is my current [.emacs](../resources/dotemacs.txt) configuration. The script could use a cleanup and perhaps make use of the `use-package` package. Further an upgrade to Emacs 24.4 would enable a more consistent use of melpa stable where desired.
+
+### List of initial packages ###
+* [haskell-mode](https://github.com/haskell/haskell-mode) (stable)
+* [ghc-mod](https://github.com/kazu-yamamoto/ghc-mod) (stable)
+* [company-ghc](https://github.com/iquiw/company-ghc)
+* [sublime-themes](https://github.com/owainlewis/emacs-color-themes) (spolsky theme)
+* [smex](https://github.com/nonsequitur/smex/)
+* [ido-vertical-mode](https://github.com/gempesaw/ido-vertical-mode.el)
+* [ido-ubiquitos-mode](https://github.com/technomancy/ido-ubiquitous)
+* [ido-flx](https://github.com/lewang/flx)
+* [magit](https://github.com/magit/magit)
+* [projectile](https://github.com/bbatsov/projectile)
+* [markdown](http://jblevins.org/projects/markdown-mode/)
+
+### Interesting packages for a later date ###
+* [org-mode](http://orgmode.org/)
+* [expand region](https://github.com/magnars/expand-region.el)
+* [ace-jump](https://github.com/winterTTr/ace-jump-mode)
+* [use-package](https://github.com/jwiegley/use-package)

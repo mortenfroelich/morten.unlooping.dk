@@ -1,0 +1,3 @@
+./site clean
+./site build
+

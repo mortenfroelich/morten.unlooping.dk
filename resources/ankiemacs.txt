@@ -1,0 +1,34 @@
+C-v; Move view forward one screen
+M-v; Move view backward one screen
+C-l; Center view on cursor
+C-c, C-w; Save as
+C-x d; Open Dired
+M-<; Begining of Buffer
+M->; End of Buffer
+M-a; Start of sentence
+M-e; End of sentence
+M-#; Prefix multiply command
+M-Backspace; Delete word before cursor
+M-d; Delete word after cursor
+C-k; Kill line
+M-k; Kill sentence
+C-w; Kill region
+M-w; Copy region
+C-space; Set Mark
+C-/; Undo / Redo
+C-h m; View major mode documentation
+C-s; forward search, Enter terminates, Backspace goes back
+C-r; reverse search, Enter terminates, Backspace goes back
+C-x o; Switch to other window
+C-x 2; Open second horizontal window
+C-x 3; Open second vertical window
+C-M-v; Scroll other window
+C-x 4 C-f; Open file in other window
+C-h c; Brief help description
+C-h k; Long help
+C-h f; Describe function
+C-h v; Describe variable
+C-h a; Command Apropos
+C-h i; Open Emacs Info
+C-x 8 C-h; List of character composition
+Linux Alt-F9; Minimize window

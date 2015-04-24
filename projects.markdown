@@ -6,7 +6,7 @@ Below is a list of current and future project ideas. It needs split into in prog
 
 ## Current project ##
 * Basic homepage 
-    * setup [git-hub](http://www.github.com) repo
+    * setup [git-hub](http://www.github.com) repo ([done](https://github.com/mortenfroelich/morten.unlooping.dk))
     * write basic content
     * look into [clay](http://fvisser.nl/clay/) for styling
         * style inspiration: [http://austinrochford.com](http://austinrochford.com)

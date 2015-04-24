@@ -32,3 +32,17 @@ C-h a; Command Apropos
 C-h i; Open Emacs Info
 C-x 8 C-h; List of character composition
 Linux Alt-F9; Minimize window
+MD: C-c C-l a; MD: Insert link
+MD: C-c C-l u; MD: Insert bare url
+MD: C-c C-s c; MD: Format as code
+MD: C-c C-s s; MD: Format as bold
+MD: C-c C-s e; MD: Format as italic
+MD: C-c C-t h; MD: Insert heading at point
+MD: C-c C-t #; MD: Insert heading level #
+MD: C-c C--; MD: Decrease level
+MD: C-c C-=; MD: Increase level
+MD: M-RET; MD: Insert list item at level
+MD: C-u M-RET; MD: Decrease indentation and insert list item
+MD: C-u C-u M-RET; MD: Increase indentation and insert list item
+MD: C-c C-n; MD: Move to next heading
+MD: C-c C-p; MD: Move to previous heading

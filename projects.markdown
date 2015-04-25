@@ -56,6 +56,8 @@ Below is a list of current and future project ideas. It needs split into in prog
 * Find an open source project to contribute to
 * Write something AI / Algorithm related
 * Return to customizign Emacs see outstanding packages in previous [blog post](posts/2015-04-23-emacs.html)
+* Create keybinding trainer game
+    * Idea outline: Keybindings keep something 'alive'/'up', for keybinding -> function training home keys select from a random sample. Extension: look into Anki algorithm for repitition ordering.
 
 ### Wilder ideas ###
 * Learn the Dvorak layout

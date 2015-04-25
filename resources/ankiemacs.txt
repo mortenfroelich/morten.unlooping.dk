@@ -46,3 +46,55 @@ MD: C-u M-RET; MD: Decrease indentation and insert list item
 MD: C-u C-u M-RET; MD: Increase indentation and insert list item
 MD: C-c C-n; MD: Move to next heading
 MD: C-c C-p; MD: Move to previous heading
+M-%; query-replace
+C-M-%; query-replace-regexp
+C-c m; magit-status
+magit: $; magit-process buffer
+magit: g; magit: reload status buffer
+magit: TAB; magit: Toggle visibility of current section
+magit: S-TAB; magit: Toggle visibility of current section and its children
+magit: 1,2,3,4; magit: Expand current section to the corresponding level of detail
+magit: M-1,2,3,4; magit: Expand all sections to the corresponding level of detail
+magit: s; magit: Add untracked file to staging area
+magit: i; magit: Add file to .gitignore
+magit: C-u i; magit: Prompt for file/directory to add to .gitignore
+magit: u; magit: Unstage current hunk
+magit: S; magit: Stage all hunks
+magit: U; magit: Unstage all hunks
+magit: k; magit: Discard uncommitted changes
+magit: c; magit: Prepare for commit
+magit: C-c C-c; magit: Execute commit
+magit: C-c C-a; magit: Make the next commit an amend
+magit: l; magit: Terse History
+magit: L; magit: Verbose history
+magit: C-u l; magit: History segment
+magit: history: RET; magit: history: Inspect commit
+magit: history: C-w; magit: history: Copy sha1 of current commit into kill ring
+magit: history: =; magit: history: Show differences between current and marked commits
+magit: history: ..; magit: history: Mark current commit
+magit: history: .; magit: history: Unmark current commit if marked
+magit: history: C-u ..; magit: history: Unmark marked commit from anywhere
+magit: d; magit: Show changes between working tree and HEAD
+magit: D; magit: Show changes between two arbitrary revisions
+magit: t; magit: Make lightweight tag
+magit: T; magit: Prepare annotated tag; magit: Launches magit-log-edit buffer for writing annotation.
+magit: C-c C-c; magit: Commit annotated tag
+magit: x; magit: Reset your current head to chosen revision
+magit: X; magit: Reset working tree and staging area to most recent committed state, Destructive! Will discard all local modifications.
+magit: z; magit: Create new stash
+magit: Z; magit: Create new stash and maintain state
+magit: stash: a; magit: stash: Apply stash
+magit: stash: A; magit: stash: Pop stash
+magit: stash: k; magit: stash: Drop stash
+magit: b; magit: Switch to different branch
+magit: B; magit: Create and switch to new branch
+magit: w; magit: Show summary of how other branches relate to current branch
+magit: wazzup: i; magit: wazzup: Toggle ignore branch
+magit: wazzup: C-u w; magit: wazzup: Show all branches including ignored ones
+magit: m; magit: Initiate manual merge
+magit: M; magit: Initiate automatic merge
+magit: R; magit: Initiate or continue a rebase
+magit: P; magit: git push
+magit: C-u P; magit: git push to specified remote repository
+magit: f; magit: git remote update
+magit: F; magit: git pull

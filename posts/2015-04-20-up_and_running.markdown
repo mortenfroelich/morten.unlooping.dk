@@ -1,5 +1,7 @@
 ---
 title: Getting up and running
+description: Dairy of setting up a system for development
+author: Morten Frølich
 ---
 
 Since I just started paternity leave I have a chance to get back into some hobby projects.

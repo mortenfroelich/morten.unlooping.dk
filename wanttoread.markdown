@@ -1,5 +1,7 @@
 ---
 title: Want to Read
+description: List of content that I would like consume at some point.
+author: Morten Frølich
 ---
 
 Simply a long list of stuff I need to get around to reading.
@@ -64,6 +66,12 @@ Currently reading:
 #### Read after this got thrown together ####
 
 -
+
+#### Sources of inspiration for more books ####
+* <http://www.catonmat.net/blog/top-100-books-part-one/>
+* <http://www.squeakland.org/resources/books/readingList.jsp>
+* <http://worrydream.com/#!/Links>
+
 
 ### Want to Watch ###
 * [Compose Conference - The F# Path to Relaxation](https://www.youtube.com/watch?v=W-D6W7EA8gw)

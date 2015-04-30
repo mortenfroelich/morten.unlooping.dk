@@ -1,5 +1,7 @@
 ---
 title: Project Gamification
+description: Plans for gamification of future projects.
+author: Morten Frølich
 ---
 
 I had great success with gamification of my last project. So I will give it another try!

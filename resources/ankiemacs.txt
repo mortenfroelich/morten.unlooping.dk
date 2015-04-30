@@ -48,7 +48,7 @@ MD: C-c C-n; MD: Move to next heading
 MD: C-c C-p; MD: Move to previous heading
 M-%; query-replace
 C-M-%; query-replace-regexp
-C-c m; magit-status
+C-x m; magit-status
 magit: $; magit-process buffer
 magit: g; magit: reload status buffer
 magit: TAB; magit: Toggle visibility of current section
@@ -77,8 +77,7 @@ magit: history: C-u ..; magit: history: Unmark marked commit from anywhere
 magit: d; magit: Show changes between working tree and HEAD
 magit: D; magit: Show changes between two arbitrary revisions
 magit: t; magit: Make lightweight tag
-magit: T; magit: Prepare annotated tag; magit: Launches magit-log-edit buffer for writing annotation.
-magit: C-c C-c; magit: Commit annotated tag
+magit: T; magit: Prepare annotated tag Launches magit-log-edit buffer for writing annotation.
 magit: x; magit: Reset your current head to chosen revision
 magit: X; magit: Reset working tree and staging area to most recent committed state, Destructive! Will discard all local modifications.
 magit: z; magit: Create new stash
@@ -98,3 +97,7 @@ magit: P; magit: git push
 magit: C-u P; magit: git push to specified remote repository
 magit: f; magit: git remote update
 magit: F; magit: git pull
+C-x h; mark-whole-buffer
+C-x v l; log-view-find-revision
+company: M-n; company: Next autocompletion
+company: M-p; company: Previous autocompletion

@@ -1,5 +1,7 @@
 ---
 title: Project outline and goals
+description: Overview of my projects
+author: Morten Frølich
 ---
 
 Below is a list of current and future project ideas. It needs split into in progress and future.
@@ -10,9 +12,13 @@ Below is a list of current and future project ideas. It needs split into in prog
     * write basic content
     * look into [clay](http://fvisser.nl/clay/) for styling
         * style inspiration: [http://austinrochford.com](http://austinrochford.com)
-    * add links to git-hub profile and meetup profile (create first)
-    * add comments
+            * Austins site has led me to [Bootstrap](http://getbootstrap.com/) which inspired me to try to make a Hakyll backend for [the blog example](http://getbootstrap.com/examples/blog/).
+            * I've searched around in the Hakyll examples and found [Ian Ross' blog](http://www.skybluetrades.net/) which has a nicely coded backend with some of the features I will need such as index pages with blog posts. I am hoping to be able to transform the tag cloud into the yearly archive. Maybe have an optional tag cloud aswell.
+            * If all this works out I'll look into cleaning up the example and moving it to a Hakyll-Bootstrap-Blog example repo for others to use.
+    * add links to git-hub profile (done) and meetup profile (create first)
+    * add comments (might not want to bother with comments)p
     * add tags / tag cloud
+	* find images atleast for favicon maybe for others..
     * look at johntyree's blog about setting up Hakyll [here](https://github.com/johntyree/blag/blob/master/posts/2013-01-28-getting-started-with-hakyll.md)
     * Create about section with at least current info and CV.
 

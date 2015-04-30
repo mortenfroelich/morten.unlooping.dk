@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
-import           Hakyll
+import Data.Monoid (mappend)
+import Hakyll
 
 
 --------------------------------------------------------------------------------
@@ -19,26 +19,43 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match (fromList ["projects.markdown", "wanttoread.markdown"]) $ do
+    match "posts/*" $ version "right-panel" $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
+
+    match (fromList ["projects.markdown", "wanttoread.markdown"]) $ do
+        route   $ setExtension "html"
+        compile $ do
+            posts <- recentFirst =<< loadAll ("posts/*" .&&. hasVersion "right-panel")
+            let pageCtx =
+                    listField "posts" sideBarPostCtx (return posts) `mappend`
+                    defaultContext
+            pandocCompiler
+                >>= loadAndApplyTemplate "templates/default.html" pageCtx
+                >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/post.html"    postCtx
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
-            >>= relativizeUrls
+        compile $ do
+            posts <- recentFirst =<< loadAll ("posts/*" .&&. hasVersion "right-panel")
+            let extPostCtx =
+                    listField "posts" sideBarPostCtx (return posts) `mappend`
+                    sideBarPostCtx
+            pandocCompiler
+                >>= loadAndApplyTemplate "templates/post.html"    extPostCtx
+                >>= loadAndApplyTemplate "templates/default.html" extPostCtx
+                >>= relativizeUrls
 
     create ["archive.html"] $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- recentFirst =<< loadAll ("posts/*" .&&. hasNoVersion)
             let archiveCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Archives"            `mappend`
+                    constField "author" "Morten Frølich"     `mappend`
+                    constField "description" "Archives"      `mappend`
                     defaultContext
 
             makeItem ""
@@ -50,10 +67,9 @@ main = hakyll $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- recentFirst =<< loadAll ("posts/*" .&&. hasNoVersion)
             let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Home"                `mappend`
+                    listField "posts" sideBarPostCtx (return posts) `mappend`
                     defaultContext
 
             getResourceBody
@@ -68,4 +84,9 @@ main = hakyll $ do
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
+    defaultContext
+
+sideBarPostCtx :: Context String
+sideBarPostCtx =
+    dateField "date" "%F" `mappend`
     defaultContext

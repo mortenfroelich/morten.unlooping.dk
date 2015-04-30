@@ -1,5 +1,7 @@
 ----
 title: Diving into Emacs
+description: Blog post about setting up Emacs
+author: Morten Frølich
 ----
 
 One leg of my project is to finally get deeper into Emacs than the bare mechanics I have made use of so far.

@@ -1,7 +1,7 @@
 C-v; Move view forward one screen
 M-v; Move view backward one screen
 C-l; Center view on cursor
-C-c, C-w; Save as
+C-x, C-w; Save as
 C-x d; Open Dired
 M-<; Begining of Buffer
 M->; End of Buffer
@@ -101,3 +101,6 @@ C-x h; mark-whole-buffer
 C-x v l; log-view-find-revision
 company: M-n; company: Next autocompletion
 company: M-p; company: Previous autocompletion
+M-m; back-to-indentation
+C-s C-w; Add word after point to isearch
+M-c; capitalize-word

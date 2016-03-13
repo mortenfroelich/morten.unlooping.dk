@@ -24,7 +24,7 @@ main = hakyll $ do
         compile $ pandocCompiler
             >>= relativizeUrls
 
-    match (fromList ["projects.markdown", "wanttoread.markdown"]) $ do
+    match (fromList ["projects.markdown", "wanttoread.markdown", "challenge.markdown"]) $ do
         route   $ setExtension "html"
         compile $ do
             posts <- recentFirst =<< loadAll ("posts/*" .&&. hasVersion "right-panel")

@@ -158,3 +158,13 @@
 
 ;;Set key for magit-status
 (global-set-key (kbd "C-x m") 'magit-status)
+
+;;Set up hooks so that .jptxt and .jpmd files are treated as japanese with japanese input and large font size.
+(defun my-set-text-japanese ()
+  (when (and (stringp buffer-file-name)
+             (or (string-match "\\.jp.txt\\'" buffer-file-name)
+		 (string-match "\\.jp.md\\'" buffer-file-name)))
+    (set-input-method "japanese")
+    (text-scale-set 10)))
+
+(add-hook 'find-file-hook 'my-set-text-japanese)

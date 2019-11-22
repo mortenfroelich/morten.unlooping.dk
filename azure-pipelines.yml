@@ -1,0 +1,19 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    docker run --name hakyll noteed/hakyll https://github.com/mortenfroelich/morten.unlooping.dk.git
+    docker cp hakyll:/home/hakyll/clone/_site .
+    dir
+  displayName: 'Pull and compile using docker image'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'azureresourceconnection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az storage blob upload-batch --account-name $(storageaccountname) --account-key $(storageaccountkey) --destination ''$web'' --source _site'

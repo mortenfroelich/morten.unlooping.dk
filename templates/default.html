@@ -13,6 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.0/slate/bootstrap.min.css" rel="stylesheet" integrity="sha384-VcMuMipwZi4w/5TdG2N9UHUemUaq7hskxODXO2q0zBvHMQYXMhFu/+VMLMGv8s8G" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/css/blog.css" rel="stylesheet">
@@ -25,29 +26,27 @@
   </head>
 
   <body>
-
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item" href="/">Home</a>
-          <a class="blog-nav-item" href="/projects.html">Projects</a>
-          <a class="blog-nav-item" href="/wanttoread.html">Want To Read</a>
-          <a class="blog-nav-item" href="/challenge.html">Challenge</a>
-        </nav>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Morten Frølich Unlooping</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/wanttoread.html">Want To Read</a></li>
+            <li><a href="/challenge.html">Challenge</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://github.com/mortenfroelich"><i class="fa fa-github fa-lg fa-fw"></i></a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-
+    </nav>
     <div class="container">
-
-      <div class="blog-header">
-        <h1 class="blog-title">Morten Unlooping.dk</h1>
-        <p class="lead blog-description">A blog / scribbleboard about my interests.</p>
-      </div>
-
       <div class="row">
-
-        <div class="col-sm-8 blog-main">
-
+        <div class="col-md-10 col-md-offset-1">
           <div class="blog-post">
             <h2 class="blog-post-title">$title$</h2>
 
@@ -59,9 +58,7 @@
               <li><a href="/archive.html">Archives</a></li>
             </ul>
           </nav>
-
         </div><!-- /.blog-main -->
-
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>Morten Frølich</h4>
@@ -69,22 +66,9 @@
 	    <p>This is my personal blog / scribbleboard where (when time permits it) I scribble about my various interests.</p>
           </div>
           <div class="sidebar-module">
-	  <a href="/challenge.html">
-	    <img src="/images/kanjidamagestatus.png" height="180" width="240"/>
-	  </a>
-	  </div>
-          <div class="sidebar-module">
             <h4>Archives</h4>
             <ol class="list-unstyled">
               $partial("templates/post-list.html")$
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="https://www.github.com/mortenfroelich">GitHub</a></li>
-              <li><a href="http://lang-8.com/1247784">Lang-8</a></li>
-              <li><a href="http://www.facebook.com/morten.froelich">Facebook</a></li>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
